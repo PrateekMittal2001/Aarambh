@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --gradient-warm: linear-gradient(135deg, #fff8f0 0%, #fef9c3 50%, #dcfce7 100%);
+    --gradient-hero: linear-gradient(135deg, #fdf2f8 0%, #fff8f0 30%, #f0fdf4 70%, #f0f9ff 100%);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased text-gray-800;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-saffron-600 via-lotus-500 to-sky-600 bg-clip-text text-transparent;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-gradient-to-r from-saffron-500 to-saffron-600 px-6 py-3 font-semibold text-white shadow-lg shadow-saffron-200 transition-all duration-300 hover:shadow-xl hover:shadow-saffron-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-saffron-500 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full border-2 border-saffron-500 px-6 py-3 font-semibold text-saffron-600 transition-all duration-300 hover:bg-saffron-50 focus:outline-none focus:ring-2 focus:ring-saffron-500 focus:ring-offset-2;
+  }
+}
